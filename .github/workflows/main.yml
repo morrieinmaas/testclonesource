@@ -13,5 +13,5 @@ jobs:
       env: 
         SSH_PRIVATE_KEY: ${{ secrets.GITLAB_SSH_PRIVATE_KEY }}
       with:
-        source-repo: 'git@github.com/morrieinmaas/testclonesource.git'
-        destination-repo: 'git@gitlab.encompasshost.com/moritz.schlichting/testclonedestination.git'
+        source-repo: 'git@github.com:morrieinmaas/testclonesource.git'
+        destination-repo: 'git@gitlab.encompasshost.com:moritz.schlichting/testclonedestination.git'
