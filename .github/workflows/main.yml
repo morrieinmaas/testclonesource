@@ -8,9 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: wearerequired/git-mirror-action@master
-    - env: 
+    - name: trigger mirror
+      uses: wearerequired/git-mirror-action@master
+      env: 
         SSH_PRIVATE_KEY: ${{ secrets.GITLAB_SSH_PRIVATE_KEY }}
-    - with:
+      with:
         source-repo: 'git@github.com/morrieinmaas/testclonesource.git'
         destination-repo: 'git@gitlab.encompasshost.com/moritz.schlichting/testclonedestination.git'
